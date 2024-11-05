@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class Ejercicio1 {
+    private static int[] codigo ;
+    private static String[] nombre ;
+    private static double[][] notas ;
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        
+        int cantidadEstudiantes = 5; 
+        codigo = new int[cantidadEstudiantes];
+        nombre = new String[cantidadEstudiantes];
+        notas = new double[cantidadEstudiantes][4]; 
+
+        
+        for (int i = 0; i < cantidadEstudiantes; i++) {
+            codigo[i] = random.nextInt(10); 
+            nombre[i] = "Estudiante" + (i + 1); 
+            notas [i][0] = 0 + random.nextInt(5.0); 
+            notas[i][1] = 0 + random.nextInt(5.0); 
+            notas[i][2] = 0 + random.nextInt(5.0);
+
+            notas[i][3] = calcularDefinitiva(notas[i][0], notas[i][1], notas[i][2]);
+
+
+        }
+     
+      
+    }
+
+    private static double calcularDefinitiva(double d, double d0, double d1) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+}
